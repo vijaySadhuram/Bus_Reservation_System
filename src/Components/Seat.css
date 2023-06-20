@@ -1,15 +1,30 @@
 /* SeatBookingPage.css */
-.container {
+.seat-booking-page {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
 }
 
+.selected-seats-container {
+  margin-top: 20px;
+}
+
+.selected-seats-container h2 {
+  margin-bottom: 5px;
+}
+
+.selected-seats-container p {
+  margin: 0;
+}
+
 .seat-types-container {
-  display: flex;
-  align-items: center;
   overflow-x: auto;
   padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.seat-types-container h2 {
+  margin-bottom: 5px;
 }
 
 .seat-types {
@@ -17,47 +32,67 @@
 }
 
 .seat-type {
-  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
 }
 
-.seat-type-label {
+.seat-type-color {
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  border: 1px solid #ccc;
+}
+
+.seat-type span {
   font-size: 12px;
-  font-weight: bold;
 }
 
-.seat-type-desc {
-  font-size: 10px;
-  color: #777;
+.seat-type.available .seat-type-color {
+  background-color: #e5e5e5;
+  border-color: #008000;
 }
 
-.scroll-button {
-  padding: 5px;
-  margin: 0 5px;
-  font-size: 20px;
-  background: transparent;
-  border: none;
-  color: #777;
-  cursor: pointer;
+.seat-type.available-women .seat-type-color {
+  background-color: #e5e5e5;
+  border-color: #ff69b4;
 }
 
-.scroll-button:focus {
-  outline: none;
+.seat-type.selected-by-you .seat-type-color {
+  background-color: #5cb85c;
+  border-color: #5cb85c;
 }
 
-.scroll-button:hover {
-  color: #333;
+.seat-type.booked .seat-type-color {
+  background-color: #e5e5e5;
+  border-color: #e5e5e5;
+}
+
+.seat-type.booked-women .seat-type-color {
+  background-color: #e5e5e5;
+  border-color: #ff69b4;
+}
+
+.seat-grid-container {
+  overflow-x: auto;
+  margin-top: 20px;
 }
 
 .seat-grid {
-  margin-bottom: 20px;
+  display: flex;
+}
+
+.deck-container {
+  margin-right: 20px;
 }
 
 .lower-deck,
 .upper-deck {
-  margin-bottom: 20px;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 10px;
 }
 
 .seat-row {
@@ -66,16 +101,23 @@
 }
 
 .seat {
-  width: 40px;
-  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #e5e5e5;
-  color: #333;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  position: relative;
+}
+
+.seat.available {
+  background-color: #e5e5e5;
+}
+
+.seat.available-women {
+  background-color: #e5e5e5;
 }
 
 .seat.selected {
@@ -83,57 +125,41 @@
   color: #fff;
 }
 
-.seat span {
+.seat.booked {
+  background-color: #e5e5e5;
+  cursor: not-allowed;
+}
+
+.seat.booked-women {
+  background-color: #e5e5e5;
+  cursor: not-allowed;
+}
+
+.price {
   font-size: 12px;
-}
-
-.seat-number {
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 12px;
-}
-
-.seat-details {
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 12px;
-}
-
-.seat-deck {
-  position: absolute;
-  top: 50%;
-  right: -25px;
-  transform: translateY(-50%);
-  font-size: 12px;
-  color: #777;
-}
-
-.selected-seats {
-  margin-bottom: 20px;
-}
-
-.selected-seats h2 {
-  margin-bottom: 10px;
+  margin-top: 5px;
 }
 
 button {
+  margin-top: 20px;
   padding: 10px 20px;
-  font-size: 14px;
   background-color: #007bff;
   color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
-}
-
-button:focus {
-  outline: none;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 button:hover {
   background-color: #0056b3;
 }
+.newContainer{
+  display: block;
+  /* justify-content: center; */
+ 
+}
+

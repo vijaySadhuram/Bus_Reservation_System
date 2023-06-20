@@ -1,150 +1,21 @@
 /* App.css */
+
+
+/* SeatBookingPage.css */
+/* App.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  /* SeatBookingPage.css */
-  .seat-grid {
-    margin-bottom: 20px;
-  }
-  
-  .lower-deck,
-  .upper-deck {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .seat-row {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .seat {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #e5e5e5;
-    color: #333;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    position: relative;
-  }
-  
-  .seat.selected {
-    background-color: #5cb85c;
-    color: #fff;
-  }
-  
-  .seat span {
-    font-size: 12px;
-  }
-  
-  .seat-number {
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 12px;
-  }
-  
-  .seat-details {
-    position: absolute;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 12px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-  }
-  
-  .seat:hover .seat-details {
-    opacity: 1;
-    pointer-events: auto;
-  }
-  
-  .selected-seats {
-    margin-bottom: 10px;
-  }
-  
-  .selected-seats h2 {
-    margin-bottom: 5px;
-  }
-  
-  .selected-seats p {
-    margin: 0;
-  }
-  
-  button {
-    padding: 10px 20px;
-    background-color: #5cb85c;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* Seat.css */
-  .seat.available {
-    background-color: #e5e5e5;
-    color: #333;
-  }
-  
-  .seat.available:hover {
-    background-color: #ccc;
-  }
-  
-  .seat.booked {
-    background-color: #d9d9d9;
-    color: #888;
-    cursor: not-allowed;
-  }
-  
-  .seat.booked:hover {
-    background-color: #d9d9d9;
-  }
-  
-  .seat.selected-by-you {
-    background-color: #5cb85c;
-    color: #fff;
-  }
-  
-  .seat.selected-by-you:hover {
-    background-color: #5cb85c;
-  }
-  
-  .seat.available-women {
-    background-color: #ffe6e6;
-    color: #ff0000;
-  }
-  
-  .seat.available-women:hover {
-    background-color: #ffcfcf;
-  }
-  
-  .seat.booked-women {
-    background-color: #ffd9cc;
-    color: #ff6600;
-    cursor: not-allowed;
-  }
-  
-  .seat.booked-women:hover {
-    background-color: #ffd9cc;
-  }
-  
-  .seat-deck {
-    position: absolute;
-    top: 2px;
-    right: 2px;
-    font-size: 10px;
-    background-color: #333;
-    color: #fff;
-    padding: 2px 4px;
-    border-radius: 2px;
-  }
-  
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+

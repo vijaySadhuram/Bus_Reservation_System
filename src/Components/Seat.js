@@ -1,21 +1,31 @@
 import React, { useState } from 'react';
 
-const Seat = ({ seatNumber, deck, seatType, price, onClick }) => {
-  const [selected, setSelected] = useState(false);
+const Seat = ({ seatNumber, seatType, price, onClick }) => {
+  const [isSelected, setIsSelected] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   const handleClick = () => {
-    setSelected(!selected);
+    setIsSelected(!isSelected);
     onClick(seatNumber, price);
+  };
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
   };
 
   return (
     <div
-      className={`seat ${selected ? 'selected' : ''}`}
+      className={`seat ${isSelected ? 'selected' : ''} ${seatType}`}
       onClick={handleClick}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
-      <span className="seat-number">{seatNumber}</span>
-      <span className="seat-details">{seatType}</span>
-      {deck && <span className="seat-deck">{deck}</span>}
+      {seatNumber}
+      {isHovered && <span className="price">{price}₹</span>}
     </div>
   );
 };
