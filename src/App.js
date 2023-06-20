@@ -1,13 +1,14 @@
-import Header from  './Components/Header.js';
-import './App.css';
+import React from 'react';
+import SeatBookingPage from './Components/SeatBookingPage';
+import './App.css'
 
-function App() {
+const App = () => {
   return (
     <div>
-      Helo world  <Header  name={"viajy"}/>
-
+      <h1>Bus Seat Booking</h1>
+      <SeatBookingPage />
     </div>
   );
-}
+};
 
 export default App;
